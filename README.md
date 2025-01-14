@@ -1,6 +1,8 @@
 # Drone Footage Analysis for Open Pit Blast Rating
 
+Setting Up Git LFS for Model Files
 
+This repository uses Git Large File Storage (Git LFS) to manage large model files, such as cv_model.pth. Please ensure Git LFS is installed and configured on your system before cloning or pulling this repository.
 
 ### Multi-Stage Pipeline
 
