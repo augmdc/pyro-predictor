@@ -1,18 +1,42 @@
-File Descriptions
+# Drone Footage Analysis for Open Pit Blast Rating
 
-extracting_frames.py
 
-This script is used to extract frames from edited videos.
 
+### Multi-Stage Pipeline
+
+#### get detectron2 in root_directory
+` git clone 'https://github.com/facebookresearch/detectron2/'`
+
+#### stage 0
+
+`demo/Multi-stage/extracting_frames.py`
+
+#### stage 1
+`demo/Multi-stage/map_align.py`
+
+#### stage 2, 3 model prediction
+`demo/Multi-stage/process_frames.py`
+
+### Visualization and Video Generation
+#### generate visualizations
+`demo/Visualization/generate_all_visualization.py`
+
+#### generate videos
+`demo/Utils/Images_to_video.py`
+
+
+### CV Model Training
 Dataset for Segmentation
-	1.	Labeling Data
+1.	Labeling Data
 Use Labelme to label the data.
 https://www.labelme.io/docs/install-labelme
-	2.	Converting to COCO Format
-Convert the labeled data into COCO format using the script CVDataset/labelme2coco.py.
+2.	Converting to COCO Format
+Convert the labeled data into COCO format using the script `demo/Utils/labelme2coco.py`
 
 Training Custom Model
 
 After preparing the dataset:
-	•	Train your custom segmentation model using cv_train.ipynb.
- 
+* Train your custom segmentation model using `demo/Training/cv_model_training.ipynb`
+
+### Decision Tree Training
+`demo/Training/decision_tree_training.py`

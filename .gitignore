@@ -1,5 +1,11 @@
 .DS_Store
 
+.idea/
+Data*/
+*_output/
+
+detectron2/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
