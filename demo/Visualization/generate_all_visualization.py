@@ -14,7 +14,7 @@ if __name__ == "__main__":
         "C1_352_312",
         "C1_364_105",
     ]
-    folder_index = 5
+    folder_index = 0
     generate_rating(folder_names[folder_index])
     generate_contour_map(folder_names[folder_index])
     generate_time_sequence(folder_names[folder_index])

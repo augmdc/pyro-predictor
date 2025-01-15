@@ -3,6 +3,8 @@ import os
 from tqdm import tqdm
 
 
+data_folder = ["Data1of3", "Data2of3", "Data3of3"]
+
 folder_names = [
     "C1_328_109",
     "C1_352_121",
@@ -12,10 +14,8 @@ folder_names = [
     "C1_352_312",
     "C1_364_105",
 ]
-
-data_folder = ["Data1of3", "Data2of3", "Data3of3"]
-data_folder_names = data_folder[2]
-BLAST_NAME = folder_names[5]
+data_folder_names = data_folder[1]
+BLAST_NAME = folder_names[1]
 
 video_name = BLAST_NAME.split("_", 1)[1]
 

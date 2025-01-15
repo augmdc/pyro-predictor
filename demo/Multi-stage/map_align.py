@@ -5,6 +5,8 @@ import os
 
 # --- User Inputs ---
 
+data_folder = ["Data1of3", "Data2of3", "Data3of3"]
+
 folder_names = [
     "C1_328_109",
     "C1_352_121",
@@ -14,9 +16,8 @@ folder_names = [
     "C1_352_312",
     "C1_364_105",
 ]
-data_folder = ["Data1of3", "Data2of3", "Data3of3"]
-data_folder_names = data_folder[2]
-BLAST_NAME = folder_names[5]
+data_folder_names = data_folder[0]
+BLAST_NAME = folder_names[0]
 
 # Input file path
 file_path = f"{data_folder_names}/{BLAST_NAME}/{BLAST_NAME}.csv"
@@ -40,6 +41,7 @@ os.makedirs(output_dir_images, exist_ok=True)
 # --- Step 1: Preprocessing and Scaling Drillhole Coordinates ---
 df = pd.read_csv(file_path)
 
+df["Hole.id"] = df["Hole.id"].astype(str)
 # Filter out rows where "Hole.id" contains "BMM"
 df = df[~df["Hole.id"].str.contains("BMM", na=False)]
 

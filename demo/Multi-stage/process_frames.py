@@ -36,7 +36,7 @@ folder_names = [
     "C1_364_105",
 ]
 
-folder_index = 5
+folder_index = 0
 
 BLAST_NAME = folder_names[folder_index]
 
